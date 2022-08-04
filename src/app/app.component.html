@@ -1,0 +1,19 @@
+<nb-layout>
+  <nb-layout-header style="width:100%;"> 
+    <h1 style="font-size:1rem;">My Shop</h1>
+    <span style="flex: 1 auto"> </span>
+    <button nbButton semi-round outline status="primary" style="float: right" size="tiny">Login</button>
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <router-outlet>
+      
+    </router-outlet>
+  </nb-layout-column>
+  <nb-layout-footer></nb-layout-footer>
+  <nb-sidebar>
+    <nb-menu [items]= "items">
+    </nb-menu>
+  </nb-sidebar>
+
+</nb-layout>

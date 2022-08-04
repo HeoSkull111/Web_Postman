@@ -1,0 +1,8 @@
+<p>{{articles.length}}</p>
+<nb-card *ngFor="let article of articles">
+    <nb-card-header> {{article.title}}</nb-card-header>
+    <nb-card-body>{{article.description}}</nb-card-body>
+    <nb-card-footer>
+        <button nbButton status="primary" (click)="toLink(article.canonical_url)">Xem thêm</button>
+    </nb-card-footer>
+</nb-card>
