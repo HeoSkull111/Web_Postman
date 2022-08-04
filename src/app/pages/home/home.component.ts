@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public flipped: boolean = false;
+
+  public toggleFlip() {
+    this.flipped = !this.flipped
+  }
 
   constructor() { }
 

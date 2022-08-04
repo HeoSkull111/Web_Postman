@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NewsRoutingModule } from './news-routing.module';
 import { NewsComponent } from './news.component';
-import { NbButton, NbButtonModule, NbCardModule } from '@nebular/theme';
+import { NbActionsModule, NbButton, NbButtonModule, NbCardModule, NbUserModule } from '@nebular/theme';
 
 
 @NgModule({
@@ -15,6 +15,8 @@ import { NbButton, NbButtonModule, NbCardModule } from '@nebular/theme';
     NewsRoutingModule,
     NbCardModule,
     NbButtonModule,
+    NbUserModule,
+    NbActionsModule,
   ],
   exports: [
     NewsComponent

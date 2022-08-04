@@ -1,8 +1,31 @@
-<p>{{articles.length}}</p>
 <nb-card *ngFor="let article of articles">
-    <nb-card-header> {{article.title}}</nb-card-header>
-    <nb-card-body>{{article.description}}</nb-card-body>
-    <nb-card-footer>
-        <button nbButton status="primary" (click)="toLink(article.canonical_url)">Xem thêm</button>
+    <nb-card-header style="background-color: rgb(153, 180, 30);"> {{article.title}}</nb-card-header>
+    <nb-card-body>
+        {{article.description}}<br />
+        <img src={{article.cover_image}} />
+    </nb-card-body>
+    <!-- <nb-card-footer>
+        
+    </nb-card-footer>
+</nb-card> -->
+    <nb-card-footer class="footer">
+        <nb-user size="large" name="{{article.user.name}}" picture="{{article.user.profile_image}}">
+        </nb-user>
+        <nb-action class="content" icon="calendar-outline"></nb-action>
+        <p style="font-weight:bold" >Create at: {{article.readable_publish_date}}</p>
+        <nb-action class="content" icon="calendar-outline"></nb-action>
+        <p  style="font-weight:bold" >Edit at: {{article.edited_at}}</p> 
+        <span style="flex:1 auto ;"></span>
+        <button nbButton status="primary" (click)="toLink(article.canonical_url)" size="medium">Xem thêm</button>
     </nb-card-footer>
 </nb-card>
+<nb-card-back *ngFor="let article of articles">
+    <nb-card status="success">
+        <nb-card-header>{{article.title}}</nb-card-header>
+        <nb-card-body>
+            <div style="height:500px" [innerHtml]="article.body"></div>
+        </nb-card-body>
+        <nb-card-footer>
+        </nb-card-footer>
+    </nb-card>
+</nb-card-back>

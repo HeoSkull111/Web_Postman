@@ -14,4 +14,8 @@ export class ArticleService {
     );
     return resultObservable;
   }
+  getById(id: number) : Observable <any> {
+    let resultObservable = this.http.get(`https://social.runwayclub.dev/api/articles/${id}`);
+    return resultObservable;
+  }
 }
